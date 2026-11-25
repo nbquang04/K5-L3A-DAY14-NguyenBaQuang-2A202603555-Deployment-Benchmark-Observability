@@ -1,79 +1,57 @@
-# Deployment — phần bạn thực hiện trên tài khoản cloud
+# Railway deployment — Part 6
 
-**Trạng thái: chưa deploy. Chưa có URL public hoặc ảnh cloud.** Code Part 6 đã chuẩn bị trong `06-lab-complete/`; không deploy thư mục app mẫu Part 3 hoặc app benchmark Part 7.
+**Đã deploy và kiểm tra public ngày 25/11/2026.**
 
-## Cách 1: Railway
+- **Public URL:** https://k5-l3a-day14-nguyenbaquang-2a202603555-deploymen-production.up.railway.app
+- **Platform:** Railway; project `zoological-tranquility`, environment `production`.
+- **Source:** branch `main`, app trong `06-lab-complete/`, commit code `ceab8258f2c18595fe4a399a1fd2e28ac69b02a1`.
+- [Dashboard](screenshots/dashboard.png) · [Running](screenshots/running.png) · [Test](screenshots/test.png).
+- [JSON kết quả HTTP thật](evidence/public-check.json). Ảnh test hiển thị JSON này, không phải giao diện Railway.
 
-1. Kiểm tra thay đổi, commit và push bài lên repo GitHub cá nhân. Repo phải Public để Lab Coach mở được. Không đưa `.env` hoặc token vào commit.
-2. Đăng nhập Railway, tạo project mới và chọn **Deploy from GitHub repo**, chọn repo bài này.
-3. Trong service agent, đặt **Root Directory** là `/06-lab-complete`. File Dockerfile và `railway.toml` đều ở đây. Nếu dùng trường Config File Path tính từ gốc repo, chọn `/06-lab-complete/railway.toml`. Không để service build Dockerfile ở gốc repo.
-4. Trong cùng project, thêm database **Redis**. Đợi Redis sẵn sàng.
-5. Trong Variables của service agent, thêm:
+## Cấu hình đã dùng
 
-   | Biến | Giá trị |
-   |---|---|
-   | `AGENT_API_KEY` | Chuỗi ngẫu nhiên tự tạo, giữ riêng |
-   | `REDIS_URL` | Reference tới `REDIS_URL` của service Redis, thường là `${{Redis.REDIS_URL}}`; tên phải khớp service thực tế |
-   | `ENVIRONMENT` | `production` |
-   | `RATE_LIMIT_PER_MINUTE` | `10` |
-   | `DAILY_BUDGET_USD` | `1` |
-   | `MONTHLY_BUDGET_USD` | `10` |
-   | `LOG_LEVEL` | `INFO` |
+Root Directory `/06-lab-complete`, builder Dockerfile, Dockerfile path `/06-lab-complete/Dockerfile`, healthcheck `/health`, public domain target port `8000`. Dùng CMD trong Dockerfile, không cần Custom Start Command. Railway UI thông báo Config as Code deprecated và service mới không thể opt in; đã cấu hình qua dashboard. `railway.toml` vẫn giữ cho bài lab.
 
-   Để nền tảng cấp `PORT`; Dockerfile tự đọc biến này. Không đặt `REDIS_URL=localhost` vì Redis chạy ở service khác.
-6. Deploy/redeploy agent. Logs phải có JSON `startup`; healthcheck `/health` thành công.
-7. Vào Networking → Generate Domain để lấy URL HTTPS. Chạy kiểm tra ở mục bên dưới.
+Redis nằm **cùng project và environment** với app, dùng private network, không cần expose Redis public.
 
-Cách tạo key trong terminal của bạn: `python -c "import secrets; print(secrets.token_urlsafe(32))"`. Chỉ dán vào Variables; không chụp key trong screenshot.
+| Biến service app | Giá trị |
+|---|---|
+| `AGENT_API_KEY` | Secret xác thực ứng dụng, không ghi vào repo |
+| `REDIS_URL` | Reference `${{Redis.REDIS_URL}}` |
+| `PORT` | `8000` |
+| `ENVIRONMENT` | `production` |
+| `RATE_LIMIT_PER_MINUTE` | `10` |
+| `DAILY_BUDGET_USD` | `1` |
+| `MONTHLY_BUDGET_USD` | `10` |
+| `LOG_LEVEL` | `INFO` |
 
-Root directory và Docker build dựa trên [Railway monorepo docs](https://docs.railway.com/deployments/monorepo) và [Dockerfile docs](https://docs.railway.com/builds/dockerfiles).
+`AGENT_API_KEY` tự tạo, gửi qua header `X-API-Key`. Không phải key OpenAI/Gemini. App dùng mock LLM cho benchmark, không gọi model trả phí. Không lưu giá trị key hay Redis URL vào báo cáo.
 
-## Cách 2: Render
+## Kiểm tra thực tế
 
-1. Trên Render, tạo **Key Value** tương thích Redis, cùng region với web service. Lấy **Internal URL**, giữ riêng.
-2. New → Blueprint → kết nối repo. Blueprint Path: `06-lab-complete/render.yaml`.
-3. Blueprint đã đặt `rootDir: 06-lab-complete`, `dockerfilePath: ./Dockerfile`, `dockerContext: .` và healthcheck `/health`. Đây là đường dẫn tương đối với root directory của service.
-4. Điền `REDIS_URL` bằng Internal URL vừa lấy. `AGENT_API_KEY` dùng `generateValue: true`; xem giá trị trên trang Environment khi cần test và giữ riêng.
-5. Kiểm tra gói dịch vụ hiển thị trên tài khoản trước khi tạo. Nếu hệ thống yêu cầu thanh toán ngoài ý muốn, dừng và hỏi Lab Coach.
-6. Deploy, lấy URL `https://...onrender.com`, kiểm tra `/ready` chứ không chỉ `/health`.
+| Request | Key | HTTP | Kết quả |
+|---|---|---|---|
+| GET `/health` | Không | 200 | PASS |
+| GET `/ready` | Không | 200 | PASS |
+| POST `/ask` | Không | 401 | PASS |
+| POST `/ask` | Đúng | 200 | PASS |
 
-Key Value được tạo riêng có chủ đích; Blueprint không tự tạo datastore. Cấu hình tham chiếu [Render monorepo](https://render.com/docs/monorepo-support) và [Blueprint specification](https://render.com/docs/blueprint-spec). Gói Key Value miễn phí có thể bị restart và mất dữ liệu, theo [Render free services](https://render.com/docs/free); đây là giới hạn môi trường demo.
-
-## Kiểm tra sau deploy
-
-Từ **gốc repo**, chạy bằng Python (script chỉ dùng thư viện chuẩn):
+Chạy lại từ gốc repo:
 
 ```bash
-python scripts/check_public.py https://DOMAIN-CUA-BAN
+python scripts/check_public.py https://k5-l3a-day14-nguyenbaquang-2a202603555-deploymen-production.up.railway.app
 ```
 
-Script hỏi key bằng ô nhập ẩn nếu chưa có biến `AGENT_API_KEY`, không in key và lưu `evidence/public-check.json`. Kết quả đúng:
+Script hỏi key bằng ô nhập ẩn hoặc đọc biến môi trường `AGENT_API_KEY`; không in key. `/docs` có Authorize; body mẫu POST `/ask`: `{"question":"Docker là gì?"}`. Không có endpoint `/v1/ask`.
 
-```text
-GET /health key=False: 200 (expected 200)
-GET /ready key=False: 200 (expected 200)
-POST /ask key=False: 401 (expected 401)
-POST /ask key=True: 200 (expected 200)
-```
+## Các lỗi đã xử lý
 
-Nếu `/ready` trả 503: xem Redis có đang chạy, kiểm tra reference `REDIS_URL`, region và private network. Nếu `/ask` có key trả 401: nhập lại đúng key ở service agent. Nếu 429: chờ 60 giây rồi chạy lại.
+- Redis ban đầu ở project khác: tạo Redis trong project chứa app, thêm reference.
+- Redis URL scheme invalid: ô giá trị chỉ chứa reference, không thêm `REDIS_URL=` hoặc dấu ngoặc kép.
+- API 401 sau đổi key: thay đổi còn staged chưa Apply. Đã Apply, deployment Active và gọi có key trả 200.
 
-Có thể chạy thêm script chấm trên WSL trong `06-lab-complete/`:
+## Bàn giao
 
-```bash
-export AGENT_API_KEY='KEY-CHI-GIU-TRONG-TERMINAL'
-python check_production_ready.py --public-url https://DOMAIN-CUA-BAN
-```
+Ba ảnh cloud và bốn ảnh observability local có trong `screenshots/`. Local grader nguyên bản PASS 12/12 (43/43 checks); kiểm tra public là bằng chứng riêng. GitHub Actions eval đã [chạy thành công](https://github.com/nbquang04/K5-L3A-DAY14-NguyenBaQuang-2A202603555-Deployment-Benchmark-Observability/actions/runs/45592822160).
 
-## Điền thông tin để nộp
-
-- **Public URL:** chưa có — điền sau khi deploy thật.
-- **Platform:** chọn Railway hoặc Render sau khi tạo service.
-- **Environment:** ghi tên các biến đã đặt, không ghi giá trị secret.
-- [ ] `screenshots/dashboard.png`: trang project/deployment, che secret.
-- [ ] `screenshots/running.png`: service live và healthcheck thành công.
-- [ ] `screenshots/test.png`: bốn mã HTTP ở trên.
-- [ ] Điền URL và link ảnh vào Part 3 trong `MISSION_ANSWERS.md`.
-- [ ] Kiểm tra repo Public, push commit cuối và nộp link repo trên LMS.
-
-Ảnh Grafana/Jaeger/Prometheus là bằng chứng local Part 7; không thay thế ba ảnh cloud này.
+Repo cần giữ Public và nộp link lên LMS. Chưa thao tác nộp LMS. URL phụ thuộc vòng đời dịch vụ Railway trial.

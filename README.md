@@ -1,7 +1,7 @@
 # Day 14 — Deployment, Benchmark & Observability
 
-> **Bài làm:** [Mission Answers](MISSION_ANSWERS.md) · [Benchmark Report](BENCHMARK_REPORT.md) · [Hướng dẫn deploy tiếp](DEPLOYMENT.md).
-> Code Part 6 ở `06-lab-complete/`; hướng dẫn chạy bản hoàn thiện ở đầu README của thư mục đó. Chưa có deployment cloud; không dùng URL local làm URL public.
+> **Bài làm:** [Mission Answers](MISSION_ANSWERS.md) · [Benchmark Report](BENCHMARK_REPORT.md) · [Deployment và kiểm tra public](DEPLOYMENT.md).
+> Code Part 6 ở `06-lab-complete/`; hướng dẫn chạy bản hoàn thiện ở đầu README của thư mục đó. Public Railway: [https://k5-l3a-day14-nguyenbaquang-2a202603555-deploymen-production.up.railway.app](https://k5-l3a-day14-nguyenbaquang-2a202603555-deploymen-production.up.railway.app); health/ready và API authentication đã kiểm tra thành công.
 
 > Đưa agent lên cloud, đo xem nó nhanh và đúng tới đâu, rồi giám sát nó khi chạy thật.
 

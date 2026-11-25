@@ -1,5 +1,6 @@
 """Verify a deployed Part 6 service without printing the API key."""
 import getpass
+from datetime import datetime, timezone
 import json
 import os
 from pathlib import Path
@@ -33,7 +34,8 @@ def main():
         print(f'{method} {path} key={authenticated}: {status} (expected {expected})')
     out = Path(__file__).resolve().parents[1] / 'evidence/public-check.json'
     out.parent.mkdir(exist_ok=True)
-    out.write_text(json.dumps({'base_url': base, 'checks': checks}, indent=2), encoding='utf-8')
+    out.write_text(json.dumps({'checked_at_utc': datetime.now(timezone.utc).isoformat(),
+                               'base_url': base, 'checks': checks}, indent=2), encoding='utf-8')
     raise SystemExit(0 if all(c['passed'] for c in checks) else 1)
 
 

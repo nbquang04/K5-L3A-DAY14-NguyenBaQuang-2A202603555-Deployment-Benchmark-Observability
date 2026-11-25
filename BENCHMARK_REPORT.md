@@ -64,7 +64,7 @@ Bổ sung trong `develop/utils/mock_llm.py` và `production/utils/mock_llm.py`; 
 
 v2 dùng retrieval nên prompt/context dài, token/cost mỗi câu cao hơn v1. Tuy nhiên cost/câu đúng giảm mạnh vì độ chính xác tăng. Những latency trong eval là mô tả mẫu nhỏ, không dùng thay load test.
 
-CI ở [.github/workflows/eval.yml](.github/workflows/eval.yml): khởi động v2, chờ health, chạy evaluator với ngưỡng 0.85 và baseline bản sửa cuối. Exit code 1 làm job fail; cần bật required status check trong branch protection của repo để thực sự chặn merge. Job chưa được chạy trên GitHub trong phiên này; lệnh evaluator đã chạy local.
+CI ở [.github/workflows/eval.yml](.github/workflows/eval.yml): khởi động v2, chờ health, chạy evaluator với ngưỡng 0.85 và baseline bản sửa cuối. Exit code 1 làm job fail; cần bật required status check trong branch protection của repo để thực sự chặn merge. GitHub Actions đã chạy thành công: [eval run](https://github.com/nbquang04/K5-L3A-DAY14-NguyenBaQuang-2A202603555-Deployment-Benchmark-Observability/actions/runs/45592822160); evaluator cũng đã chạy local.
 
 ## 4. Observability stack
 
@@ -136,4 +136,4 @@ Locust mô phỏng người dùng nghỉ 0.5–2 giây sau mỗi tác vụ, nên
 2. Chất lượng phải được eval: tăng token mỗi câu có thể giảm chi phí mỗi câu đúng.
 3. Kết hợp metric → trace → log cùng trace_id rút ngắn việc xác định lỗi nằm ở retrieval, model hay gateway.
 
-Nếu triển khai thật: thêm metric ở gateway, timeout/retry và queue depth, burn-rate/error-budget theo nhiều cửa sổ, budget per-user, eval trên mẫu đa dạng và quản lý retention/sampling trace. Bộ 23 câu keyword chỉ kiểm tra hồi quy của lab, chưa đủ chứng minh chất lượng AI tổng quát. Chi phí là mô phỏng; không phát sinh bill LLM. Cloud vẫn chưa deploy, xem `DEPLOYMENT.md`.
+Nếu triển khai thật: thêm metric ở gateway, timeout/retry và queue depth, burn-rate/error-budget theo nhiều cửa sổ, budget per-user, eval trên mẫu đa dạng và quản lý retention/sampling trace. Bộ 23 câu keyword chỉ kiểm tra hồi quy của lab, chưa đủ chứng minh chất lượng AI tổng quát. Chi phí là mô phỏng; không phát sinh bill LLM. Cloud Part 6 đã deploy Railway và qua bốn kiểm tra HTTP; xem `DEPLOYMENT.md`.

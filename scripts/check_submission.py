@@ -44,7 +44,7 @@ def main():
         with (ROOT / path).open() as f:
             row = next(r for r in csv.DictReader(f) if r['Name'] == '/ask')
         assert int(row['Request Count']) > 0 and float(row['Requests/s']) > 0
-    for name in ('grafana-dashboard', 'jaeger-slow-trace', 'jaeger-error-trace', 'prometheus-alert-firing'):
+    for name in ('grafana-dashboard', 'jaeger-slow-trace', 'jaeger-error-trace', 'prometheus-alert-firing', 'dashboard', 'running', 'test'):
         png = (ROOT / f'screenshots/{name}.png').read_bytes()
         assert png[:8] == b'\x89PNG\r\n\x1a\n'
         assert struct.unpack('>II', png[16:24])[0] >= 1000
@@ -67,7 +67,13 @@ def main():
                 assert (ROOT / link.split('#')[0]).exists(), f'Broken link: {link}'
     assert 'PASS 12/12' in (ROOT / 'production-check.log').read_text(encoding='utf-8')
     print('PASS: protected files, Python syntax, 10 JSON reports, Locust CSV, four screenshots, two firing alerts, trace/log correlation, document links')
-    print('PENDING: public cloud URL, 3 cloud screenshots, public repo/LMS submission')
+    public = load('evidence/public-check.json')
+    assert public['base_url'].startswith('https://')
+    assert [(c['method'], c['path'], c['authenticated'], c['status']) for c in public['checks']] == [
+        ('GET', '/health', False, 200), ('GET', '/ready', False, 200),
+        ('POST', '/ask', False, 401), ('POST', '/ask', True, 200)]
+    assert all(c['passed'] and c['status'] == c['expected'] for c in public['checks'])
+    print('PASS: public HTTP 4/4 and three cloud screenshots; LMS submission remains manual')
 
 
 if __name__ == '__main__':

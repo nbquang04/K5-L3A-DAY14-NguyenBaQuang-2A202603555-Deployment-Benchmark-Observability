@@ -1,6 +1,6 @@
 # Day 14 — Mission Answers
 
-Các kết quả dưới đây lấy từ lệnh thật chạy trên Ubuntu WSL2 và Docker Desktop ngày 25/11/2026. Bằng chứng ở `evidence/`, `reports/`, `benchmark-results/`, `screenshots/`. Cloud chưa deploy; phần còn lại được chỉ rõ trong `DEPLOYMENT.md`.
+Các kết quả dưới đây lấy từ lệnh thật chạy trên Ubuntu WSL2 và Docker Desktop ngày 25/11/2026. Bằng chứng ở `evidence/`, `reports/`, `benchmark-results/`, `screenshots/`. Cloud đã deploy Railway: [https://k5-l3a-day14-nguyenbaquang-2a202603555-deploymen-production.up.railway.app](https://k5-l3a-day14-nguyenbaquang-2a202603555-deploymen-production.up.railway.app). Kết quả thật ở [public-check.json](evidence/public-check.json).
 
 ## Part 1 — Localhost vs Production
 
@@ -77,7 +77,7 @@ Stack `k5-day14-docker` đã build/start; `/health` và `POST /ask` qua Nginx đ
 
 ### Exercise 3.1/3.2 — Trạng thái
 
-**Chưa deploy; chưa có URL public hoặc ảnh cloud.** Code, Dockerfile và hai file cấu hình đã chuẩn bị. Thực hiện tiếp theo [DEPLOYMENT.md](DEPLOYMENT.md), sau đó điền URL và ảnh dashboard/running/test vào đây. Local `PASS 12/12` không thay thế bằng chứng cloud.
+**Đã deploy Part 6 trên Railway**, project `zoological-tranquility`, environment `production`, cùng Redis private. Public URL: [https://k5-l3a-day14-nguyenbaquang-2a202603555-deploymen-production.up.railway.app](https://k5-l3a-day14-nguyenbaquang-2a202603555-deploymen-production.up.railway.app). Kiểm tra thật: GET `/health` 200, GET `/ready` 200, POST `/ask` thiếu key 401, có key 200. [JSON](evidence/public-check.json) · [Dashboard](screenshots/dashboard.png) · [Running](screenshots/running.png) · [Test](screenshots/test.png). API dùng mock LLM; `AGENT_API_KEY` xác thực ứng dụng. Xem [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ### So sánh Railway và Render
 
@@ -265,7 +265,7 @@ Log đầy đủ: [production-check.log](production-check.log). Không sửa scr
 
 Kiểm tra bổ sung [concurrency-check.json](evidence/concurrency-check.json): 40 request đồng thời, hai worker; quota 10 cho đúng 10 lần 200 + 30 lần 429. Với budget $0.0001, 6 lần thành công + 34 lần 402, tổng ghi nhận $0.0000657, không vượt budget. Input thiếu/rỗng/toàn khoảng trắng/quá dài đều 422. Script `scripts/check_concurrency.py` dùng Redis container tạm riêng.
 
-Tiêu chí "Public URL ready" trong script kiểm tra cấu hình và PORT, không chứng minh đã deploy. URL/ảnh cloud vẫn là việc còn lại.
+Tiêu chí "Public URL ready" trong script kiểm tra cấu hình và PORT, không chứng minh đã deploy. URL và ảnh cloud được kiểm tra riêng ở Part 3.
 
 ## Part 7
 
@@ -278,4 +278,4 @@ Kết quả và giải thích Exercise 7.1–7.7: [BENCHMARK_REPORT.md](BENCHMAR
 | Đọc toàn bộ hướng dẫn và Markdown | Tổng hợp 22 tài liệu, xác định điều chỉnh K5 và deliverables | Đối chiếu README, RULES, CHECKPOINTS, SUBMISSION, RUBRIC và hợp đồng Part 6 |
 | Hoàn thiện phần làm trước, để người học tự deploy | AI viết code Part 6, script bằng chứng, KB bổ sung JWT/HPA, CI, câu trả lời và hướng dẫn deploy | Script chấm nguyên bản full Docker PASS 12/12; HTTP exercises; concurrency tests; load/eval JSON; Locust CSV; Prometheus rule test và ảnh UI thật |
 
-Code/câu trả lời ở trên được AI soạn và tự kiểm tra bằng công cụ trong phiên làm việc. Người học cần đọc, tự chạy lại các lệnh chính và giải thích được code/số đo trước khi nộp; không khai nhận rằng đã tự viết hoặc tự kiểm tra thủ công những phần chưa làm. Cloud chưa được AI hay người học triển khai trong phiên này.
+Code/câu trả lời ở trên được AI soạn và tự kiểm tra bằng công cụ trong phiên làm việc. Người học cần đọc, tự chạy lại các lệnh chính và giải thích được code/số đo trước khi nộp; không khai nhận rằng đã tự viết hoặc tự kiểm tra thủ công những phần chưa làm. Người học thao tác deploy Railway, tạo Redis và cấu hình biến theo hướng dẫn AI; AI kiểm tra HTTP public, áp dụng thay đổi key còn staged và lưu minh chứng. Không đưa secret vào bài nộp.
