@@ -1,0 +1,22 @@
+INFO:     Started server process [152730]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8104 (Press CTRL+C to quit)
+INFO:     127.0.0.1:57142 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57150 - "POST /ask HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57160 - "POST /ask HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [152730]
+INFO:     Started server process [154802]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8104 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58850 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58852 - "POST /ask HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:58864 - "POST /ask HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [154802]

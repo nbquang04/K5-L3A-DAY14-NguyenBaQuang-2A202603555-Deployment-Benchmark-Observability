@@ -1,0 +1,32 @@
+INFO:     Started server process [152745]
+INFO:     Waiting for application startup.
+2026-11-25 07:48:22,991 INFO Agent starting up...
+2026-11-25 07:48:22,991 INFO Loading model and checking dependencies...
+2026-11-25 07:48:23,192 INFO ✅ Agent is ready!
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8106 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51990 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52004 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52008 - "GET /ready HTTP/1.1" 200 OK
+2026-11-25 07:48:23,372 INFO Received signal 15 — uvicorn will handle graceful shutdown
+INFO:     127.0.0.1:52012 - "POST /ask?question=Hello HTTP/1.1" 200 OK
+2026-11-25 07:48:41,384 INFO Received signal 15 — uvicorn will handle graceful shutdown
+2026-11-25 08:02:01,654 INFO Starting agent on port 8106
+INFO:     Started server process [154817]
+INFO:     Waiting for application startup.
+2026-11-25 08:02:01,702 INFO Agent starting up...
+2026-11-25 08:02:01,703 INFO Loading model and checking dependencies...
+2026-11-25 08:02:01,908 INFO ✅ Agent is ready!
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8106 (Press CTRL+C to quit)
+INFO:     127.0.0.1:57066 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57080 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57084 - "GET /ready HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     127.0.0.1:57096 - "POST /ask?question=Hello HTTP/1.1" 200 OK
+INFO:     Waiting for application shutdown.
+2026-11-25 08:02:05,268 INFO 🔄 Graceful shutdown initiated...
+2026-11-25 08:02:05,269 INFO ✅ Shutdown complete
+INFO:     Application shutdown complete.
+INFO:     Finished server process [154817]
+2026-11-25 08:02:05,271 INFO Received signal 15 — uvicorn will handle graceful shutdown

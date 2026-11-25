@@ -1,5 +1,32 @@
 # Part 6 — Final Project: Production-ready AI Agent
 
+## Bản đã hoàn thiện trong bài làm
+
+Code hiện tại đã bổ sung auth, sliding-window rate limit và budget reservation atomic bằng Redis, JSON logging, health/readiness, lifespan cleanup, Docker multi-stage và cấu hình cloud. Kết quả chấm đầy đủ được lưu ở [`../production-check.log`](../production-check.log).
+
+Chạy trên WSL2/Linux với Python 3.11+ và Docker:
+
+```bash
+cd 06-lab-complete
+cp .env.example .env
+# Sửa AGENT_API_KEY trong .env thành chuỗi ngẫu nhiên riêng của bạn.
+docker compose -p k5-day14-final up -d --build
+curl http://localhost:8000/health
+curl http://localhost:8000/ready
+```
+
+Kiểm tra `/ask` mà không in key: từ gốc repo chạy `python scripts/check_public.py` sau khi có URL HTTPS cloud. Khi test local, dùng curl với key đọc từ môi trường, không ghi key vào lệnh lưu trong bài nộp.
+
+Để tự chạy script chấm, tạo venv và cài `requirements.txt` trong venv rồi chạy `python check_production_ready.py` ngay tại thư mục này. Docker daemon phải hoạt động. `--static-only` và `--skip-docker` chỉ dành cho kiểm tra nhanh.
+
+Budget mặc định là $1/ngày và $10/tháng, dùng mốc UTC. State bảo vệ được lưu trong Redis; Redis mất kết nối thì `/health` vẫn 200, `/ready` và request cần state trả 503. Đếm token của mock chỉ là ước lượng ký tự/4. App không lưu hội thoại vì phần này không nằm trong tiêu chí bắt buộc Part 6.
+
+Deploy: xem [`../DEPLOYMENT.md`](../DEPLOYMENT.md). Dừng stack local khi xong: `docker compose -p k5-day14-final down` (giữ volume Redis để không mất bộ đếm).
+
+---
+
+**Phần hướng dẫn đề bài gốc được giữ bên dưới để đối chiếu.**
+
 Bạn tự xây một AI agent đủ chuẩn production từ **bản khung** trong thư mục này, kết hợp mọi thứ đã học ở Part 1–5.
 Mọi file đều đã có sẵn, phần việc của bạn nằm ở các chỗ ghi `TODO`. Bản khung chạy được nhưng **chưa đạt tiêu chí nào**.
 

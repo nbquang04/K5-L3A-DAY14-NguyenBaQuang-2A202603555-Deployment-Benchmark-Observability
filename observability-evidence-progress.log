@@ -1,0 +1,10 @@
+obs-build.log exit 0
+locust-scale-1.log exit 1
+obs-scale3-up.log exit 0
+locust-scale-3.log exit 1
+obs-chaos-up.log exit 0
+FIRING AgentHighErrorRate 111.06
+FIRING AgentHighLatencyP95 167.88
+observability-agents.log exit 0
+READY FOR SCREENSHOTS
+obs-restore.log exit 0

@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+date: Wed, 25 Nov 2026 08:01:57 GMT
+server: uvicorn
+content-length: 114
+content-type: application/json
+
+{"question":"Hello","answer":"Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé."}

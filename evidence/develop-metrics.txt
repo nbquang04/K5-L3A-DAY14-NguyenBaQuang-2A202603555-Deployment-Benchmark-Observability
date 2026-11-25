@@ -1,0 +1,116 @@
+# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 41371.0
+python_gc_objects_collected_total{generation="1"} 16634.0
+python_gc_objects_collected_total{generation="2"} 3858.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 292.0
+python_gc_collections_total{generation="1"} 26.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="3",version="3.12.3"} 1.0
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 2.46185984e+08
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 6.1038592e+07
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.79560099695e+09
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 5.09
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 16.0
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1024.0
+# HELP http_requests_total Tổng số HTTP request
+# TYPE http_requests_total counter
+http_requests_total{method="GET",route="unmatched",status="200"} 1.0
+http_requests_total{method="POST",route="/ask",status="200"} 1191.0
+http_requests_total{method="POST",route="/ask",status="503"} 13.0
+# HELP http_request_duration_seconds Thời gian xử lý HTTP request
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.05",method="GET",route="unmatched"} 1.0
+http_request_duration_seconds_bucket{le="0.1",method="GET",route="unmatched"} 1.0
+http_request_duration_seconds_bucket{le="0.2",method="GET",route="unmatched"} 1.0
+http_request_duration_seconds_bucket{le="0.3",method="GET",route="unmatched"} 1.0
+http_request_duration_seconds_bucket{le="0.5",method="GET",route="unmatched"} 1.0
+http_request_duration_seconds_bucket{le="0.75",method="GET",route="unmatched"} 1.0
+http_request_duration_seconds_bucket{le="1.0",method="GET",route="unmatched"} 1.0
+http_request_duration_seconds_bucket{le="1.5",method="GET",route="unmatched"} 1.0
+http_request_duration_seconds_bucket{le="2.0",method="GET",route="unmatched"} 1.0
+http_request_duration_seconds_bucket{le="3.0",method="GET",route="unmatched"} 1.0
+http_request_duration_seconds_bucket{le="5.0",method="GET",route="unmatched"} 1.0
+http_request_duration_seconds_bucket{le="+Inf",method="GET",route="unmatched"} 1.0
+http_request_duration_seconds_count{method="GET",route="unmatched"} 1.0
+http_request_duration_seconds_sum{method="GET",route="unmatched"} 0.02289406699128449
+http_request_duration_seconds_bucket{le="0.05",method="POST",route="/ask"} 0.0
+http_request_duration_seconds_bucket{le="0.1",method="POST",route="/ask"} 2.0
+http_request_duration_seconds_bucket{le="0.2",method="POST",route="/ask"} 624.0
+http_request_duration_seconds_bucket{le="0.3",method="POST",route="/ask"} 1136.0
+http_request_duration_seconds_bucket{le="0.5",method="POST",route="/ask"} 1166.0
+http_request_duration_seconds_bucket{le="0.75",method="POST",route="/ask"} 1166.0
+http_request_duration_seconds_bucket{le="1.0",method="POST",route="/ask"} 1166.0
+http_request_duration_seconds_bucket{le="1.5",method="POST",route="/ask"} 1166.0
+http_request_duration_seconds_bucket{le="2.0",method="POST",route="/ask"} 1204.0
+http_request_duration_seconds_bucket{le="3.0",method="POST",route="/ask"} 1204.0
+http_request_duration_seconds_bucket{le="5.0",method="POST",route="/ask"} 1204.0
+http_request_duration_seconds_bucket{le="+Inf",method="POST",route="/ask"} 1204.0
+http_request_duration_seconds_count{method="POST",route="/ask"} 1204.0
+http_request_duration_seconds_sum{method="POST",route="/ask"} 298.96963725730893
+# HELP agent_in_flight_requests Số request đang xử lý
+# TYPE agent_in_flight_requests gauge
+agent_in_flight_requests 0.0
+# HELP agent_question_length_chars Question length in characters
+# TYPE agent_question_length_chars histogram
+agent_question_length_chars_bucket{le="20.0"} 4.0
+agent_question_length_chars_bucket{le="50.0"} 1007.0
+agent_question_length_chars_bucket{le="100.0"} 1204.0
+agent_question_length_chars_bucket{le="200.0"} 1204.0
+agent_question_length_chars_bucket{le="500.0"} 1204.0
+agent_question_length_chars_bucket{le="1000.0"} 1204.0
+agent_question_length_chars_bucket{le="2000.0"} 1204.0
+agent_question_length_chars_bucket{le="+Inf"} 1204.0
+agent_question_length_chars_count 1204.0
+agent_question_length_chars_sum 47565.0
+# HELP llm_requests_total Số lần gọi LLM
+# TYPE llm_requests_total counter
+llm_requests_total{model="mock-llm-small",status="ok"} 1191.0
+llm_requests_total{model="mock-llm-small",status="error"} 13.0
+# HELP llm_request_duration_seconds Latency của LLM call
+# TYPE llm_request_duration_seconds histogram
+llm_request_duration_seconds_bucket{le="0.05",model="mock-llm-small"} 0.0
+llm_request_duration_seconds_bucket{le="0.1",model="mock-llm-small"} 0.0
+llm_request_duration_seconds_bucket{le="0.2",model="mock-llm-small"} 1153.0
+llm_request_duration_seconds_bucket{le="0.3",model="mock-llm-small"} 1153.0
+llm_request_duration_seconds_bucket{le="0.5",model="mock-llm-small"} 1153.0
+llm_request_duration_seconds_bucket{le="0.75",model="mock-llm-small"} 1153.0
+llm_request_duration_seconds_bucket{le="1.0",model="mock-llm-small"} 1153.0
+llm_request_duration_seconds_bucket{le="1.5",model="mock-llm-small"} 1153.0
+llm_request_duration_seconds_bucket{le="2.0",model="mock-llm-small"} 1191.0
+llm_request_duration_seconds_bucket{le="3.0",model="mock-llm-small"} 1191.0
+llm_request_duration_seconds_bucket{le="5.0",model="mock-llm-small"} 1191.0
+llm_request_duration_seconds_bucket{le="+Inf",model="mock-llm-small"} 1191.0
+llm_request_duration_seconds_count{model="mock-llm-small"} 1191.0
+llm_request_duration_seconds_sum{model="mock-llm-small"} 252.75792995003016
+# HELP llm_tokens_total Số token đã dùng
+# TYPE llm_tokens_total counter
+llm_tokens_total{model="mock-llm-small",type="input"} 87785.0
+llm_tokens_total{model="mock-llm-small",type="output"} 45305.0
+# HELP llm_cost_usd_total Tổng chi phí LLM (USD)
+# TYPE llm_cost_usd_total counter
+llm_cost_usd_total{model="mock-llm-small"} 0.04035075000000024
+# HELP agent_info Thông tin phiên bản agent (luôn = 1)
+# TYPE agent_info gauge
+agent_info{model="mock-llm-small",version="v2"} 1.0

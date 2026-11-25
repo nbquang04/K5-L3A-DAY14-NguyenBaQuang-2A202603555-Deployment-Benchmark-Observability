@@ -1,0 +1,114 @@
+INFO:     Uvicorn running on http://127.0.0.1:43075 (Press CTRL+C to quit)
+INFO:     Started parent process [158381]
+INFO:     Started server process [158384]
+INFO:     Waiting for application startup.
+{"ts": "2026-11-25T08:21:41.524482+00:00", "level": "INFO", "event": "startup", "environment": "development"}
+INFO:     Application startup complete.
+INFO:     Started server process [158383]
+INFO:     Waiting for application startup.
+{"ts": "2026-11-25T08:21:41.531804+00:00", "level": "INFO", "event": "startup", "environment": "development"}
+INFO:     Application startup complete.
+{"ts": "2026-11-25T08:21:41.551803+00:00", "level": "INFO", "event": "http_request", "request_id": "4249ddffda36412fa1628ffd050741b2", "method": "GET", "route": "/ready", "status": 200, "ms": 4.47}
+INFO:     127.0.0.1:49140 - "GET /ready HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:41.581224+00:00", "level": "INFO", "event": "http_request", "request_id": "98626a603c604f87b57f88c4792a9512", "method": "POST", "route": "/ask", "status": 402, "ms": 14.78}
+INFO:     127.0.0.1:49222 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.582050+00:00", "level": "INFO", "event": "http_request", "request_id": "61f242be232a46fdad7e782f9ba32ecc", "method": "POST", "route": "/ask", "status": 402, "ms": 16.67}
+INFO:     127.0.0.1:49218 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.586782+00:00", "level": "INFO", "event": "http_request", "request_id": "2a1851b6ca1a42fb80907c489f946e0a", "method": "POST", "route": "/ask", "status": 402, "ms": 16.68}
+INFO:     127.0.0.1:49240 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.591070+00:00", "level": "INFO", "event": "http_request", "request_id": "42afc4810151440f94c864fcb96d62de", "method": "POST", "route": "/ask", "status": 402, "ms": 21.12}
+INFO:     127.0.0.1:49224 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.592326+00:00", "level": "INFO", "event": "http_request", "request_id": "d43cac39e9d1469f96c74ea10080da63", "method": "POST", "route": "/ask", "status": 402, "ms": 20.33}
+INFO:     127.0.0.1:49228 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.596446+00:00", "level": "INFO", "event": "http_request", "request_id": "784a4d26bbaa48af8ba30a60898fd074", "method": "POST", "route": "/ask", "status": 402, "ms": 22.34}
+INFO:     127.0.0.1:49256 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.597476+00:00", "level": "INFO", "event": "http_request", "request_id": "c9e85b013ae2401e98596734007ff030", "method": "POST", "route": "/ask", "status": 402, "ms": 22.49}
+INFO:     127.0.0.1:49258 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.606018+00:00", "level": "INFO", "event": "http_request", "request_id": "63ffece63ef944d0ada2bcd613264e28", "method": "POST", "route": "/ask", "status": 402, "ms": 26.68}
+INFO:     127.0.0.1:49294 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.609458+00:00", "level": "INFO", "event": "http_request", "request_id": "d602ad647eb24509aac465a47f23b364", "method": "POST", "route": "/ask", "status": 402, "ms": 29.05}
+INFO:     127.0.0.1:49286 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.610278+00:00", "level": "INFO", "event": "http_request", "request_id": "965155b32a854d5d8723f56d9e60830d", "method": "POST", "route": "/ask", "status": 402, "ms": 30.61}
+{"ts": "2026-11-25T08:21:41.610481+00:00", "level": "INFO", "event": "http_request", "request_id": "303e49ce17ad43c1a746640b7cc8a0e9", "method": "POST", "route": "/ask", "status": 402, "ms": 27.15}
+INFO:     127.0.0.1:49326 - "POST /ask HTTP/1.1" 402 Payment Required
+INFO:     127.0.0.1:49320 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.614164+00:00", "level": "INFO", "event": "http_request", "request_id": "61b5c953099742f396116de71eed90d0", "method": "POST", "route": "/ask", "status": 402, "ms": 41.15}
+{"ts": "2026-11-25T08:21:41.614476+00:00", "level": "INFO", "event": "http_request", "request_id": "5d52c0fa56014028bcde6055f7743f3a", "method": "POST", "route": "/ask", "status": 402, "ms": 24.57}
+INFO:     127.0.0.1:49144 - "POST /ask HTTP/1.1" 402 Payment Required
+INFO:     127.0.0.1:49356 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.615811+00:00", "level": "INFO", "event": "http_request", "request_id": "670df8f49fdc452aad248f3f67f21fd0", "method": "POST", "route": "/ask", "status": 402, "ms": 23.74}
+INFO:     127.0.0.1:49394 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.618376+00:00", "level": "INFO", "event": "http_request", "request_id": "fa8ca72596c04c3a9a638be7439d247f", "method": "POST", "route": "/ask", "status": 402, "ms": 17.71}
+INFO:     127.0.0.1:49368 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.619143+00:00", "level": "INFO", "event": "http_request", "request_id": "51502c8a23a04c5380e17aca3117c636", "method": "POST", "route": "/ask", "status": 402, "ms": 43.47}
+{"ts": "2026-11-25T08:21:41.619351+00:00", "level": "INFO", "event": "http_request", "request_id": "a14f7d105f5a431a9769f4c5919a6b41", "method": "POST", "route": "/ask", "status": 402, "ms": 18.51}
+INFO:     127.0.0.1:49288 - "POST /ask HTTP/1.1" 402 Payment Required
+INFO:     127.0.0.1:49408 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.619977+00:00", "level": "INFO", "event": "http_request", "request_id": "d04d600193c0452a85294bf3d1fe6c9f", "method": "POST", "route": "/ask", "status": 402, "ms": 45.43}
+INFO:     127.0.0.1:49176 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.620592+00:00", "level": "INFO", "event": "http_request", "request_id": "1603242ab6994d13ad2aa766c79b892e", "method": "POST", "route": "/ask", "status": 402, "ms": 45.24}
+{"ts": "2026-11-25T08:21:41.620657+00:00", "level": "INFO", "event": "http_request", "request_id": "9c0609f1acd34321b118a0ff84397e2a", "method": "POST", "route": "/ask", "status": 402, "ms": 17.77}
+INFO:     127.0.0.1:49270 - "POST /ask HTTP/1.1" 402 Payment Required
+INFO:     127.0.0.1:49434 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.621295+00:00", "level": "INFO", "event": "http_request", "request_id": "5a8ddcfe30d34f18b698e0728e9af19d", "method": "POST", "route": "/ask", "status": 402, "ms": 35.35}
+{"ts": "2026-11-25T08:21:41.621467+00:00", "level": "INFO", "event": "http_request", "request_id": "14343bf9390b4dffa08a95b7274ec218", "method": "POST", "route": "/ask", "status": 402, "ms": 16.2}
+INFO:     127.0.0.1:49346 - "POST /ask HTTP/1.1" 402 Payment Required
+INFO:     127.0.0.1:49450 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.622057+00:00", "level": "INFO", "event": "http_request", "request_id": "9265c64283034affbb8a8dc1a5157ef0", "method": "POST", "route": "/ask", "status": 402, "ms": 42.71}
+{"ts": "2026-11-25T08:21:41.622210+00:00", "level": "INFO", "event": "http_request", "request_id": "6fb08af81b7547c99aef33ed37903368", "method": "POST", "route": "/ask", "status": 402, "ms": 20.73}
+INFO:     127.0.0.1:49310 - "POST /ask HTTP/1.1" 402 Payment Required
+INFO:     127.0.0.1:49422 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.622725+00:00", "level": "INFO", "event": "http_request", "request_id": "4e060721e4d84c72826d67e57fb08718", "method": "POST", "route": "/ask", "status": 402, "ms": 40.25}
+INFO:     127.0.0.1:49338 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.623267+00:00", "level": "INFO", "event": "http_request", "request_id": "440a2bb8b4f04f0f9c265ded4778f990", "method": "POST", "route": "/ask", "status": 402, "ms": 48.86}
+INFO:     127.0.0.1:49162 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.623920+00:00", "level": "INFO", "event": "http_request", "request_id": "59a5f5be8f794f0cadcbfce1fb338443", "method": "POST", "route": "/ask", "status": 402, "ms": 32.98}
+INFO:     127.0.0.1:49370 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.625071+00:00", "level": "INFO", "event": "http_request", "request_id": "e5d24402247d4faca9d22e30b0259988", "method": "POST", "route": "/ask", "status": 402, "ms": 34.69}
+INFO:     127.0.0.1:49384 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.626452+00:00", "level": "INFO", "event": "http_request", "request_id": "4c6450d930e54063978f48210d30287b", "method": "POST", "route": "/ask", "status": 402, "ms": 36.86}
+INFO:     127.0.0.1:49372 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.629796+00:00", "level": "INFO", "event": "http_request", "request_id": "66ceaa613c664d1a92b62d080fce80e4", "method": "POST", "route": "/ask", "status": 402, "ms": 20.88}
+INFO:     127.0.0.1:49436 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.630948+00:00", "level": "INFO", "event": "http_request", "request_id": "cfbd282929ef4e96b001e5b782a7642e", "method": "POST", "route": "/ask", "status": 402, "ms": 28.85}
+INFO:     127.0.0.1:49442 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.631539+00:00", "level": "INFO", "event": "http_request", "request_id": "672a8f2301f441e2806c11cad48097bf", "method": "POST", "route": "/ask", "status": 402, "ms": 28.08}
+INFO:     127.0.0.1:49446 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.632305+00:00", "level": "INFO", "event": "http_request", "request_id": "64c36e733f3c488c8bdc735b12fa1323", "method": "POST", "route": "/ask", "status": 402, "ms": 23.25}
+INFO:     127.0.0.1:49464 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.632845+00:00", "level": "INFO", "event": "http_request", "request_id": "51dd26b4d23f413496a371a16fabdfda", "method": "POST", "route": "/ask", "status": 402, "ms": 27.75}
+INFO:     127.0.0.1:49424 - "POST /ask HTTP/1.1" 402 Payment Required
+{"ts": "2026-11-25T08:21:41.663876+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:41.664627+00:00", "level": "INFO", "event": "http_request", "request_id": "cc261d758671428982f62dd5feda7a5e", "method": "POST", "route": "/ask", "status": 200, "ms": 107.03}
+INFO:     127.0.0.1:49158 - "POST /ask HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:41.683530+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:41.684211+00:00", "level": "INFO", "event": "http_request", "request_id": "14669646ba4541ca9ca379e925a3afa6", "method": "POST", "route": "/ask", "status": 200, "ms": 129.92}
+INFO:     127.0.0.1:49140 - "POST /ask HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:41.691602+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:41.692274+00:00", "level": "INFO", "event": "http_request", "request_id": "4b495ca15fbb40d18ede418c16322067", "method": "POST", "route": "/ask", "status": 200, "ms": 133.33}
+INFO:     127.0.0.1:49182 - "POST /ask HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:41.697967+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:41.698745+00:00", "level": "INFO", "event": "http_request", "request_id": "1796bb50e06441d8b3fd81eab2028303", "method": "POST", "route": "/ask", "status": 200, "ms": 134.54}
+INFO:     127.0.0.1:49210 - "POST /ask HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:41.702510+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:41.703190+00:00", "level": "INFO", "event": "http_request", "request_id": "cc203edcf28d43e1bef274ce485f7a2d", "method": "POST", "route": "/ask", "status": 200, "ms": 139.58}
+INFO:     127.0.0.1:49186 - "POST /ask HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:41.705828+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:41.706516+00:00", "level": "INFO", "event": "http_request", "request_id": "5496597d1a3d48aab239b8cbc10673be", "method": "POST", "route": "/ask", "status": 200, "ms": 143.44}
+INFO:     127.0.0.1:49194 - "POST /ask HTTP/1.1" 200 OK
+INFO:     Received SIGTERM, exiting.
+INFO:     Terminated child process [158383]
+INFO:     Terminated child process [158384]
+INFO:     Waiting for child process [158383]
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+{"ts": "2026-11-25T08:21:42.130360+00:00", "level": "INFO", "event": "shutdown_complete"}
+INFO:     Application shutdown complete.
+INFO:     Finished server process [158384]
+INFO:     Waiting for application shutdown.
+{"ts": "2026-11-25T08:21:42.137423+00:00", "level": "INFO", "event": "shutdown_complete"}
+INFO:     Application shutdown complete.
+INFO:     Finished server process [158383]
+INFO:     Waiting for child process [158384]
+INFO:     Stopping parent process [158381]

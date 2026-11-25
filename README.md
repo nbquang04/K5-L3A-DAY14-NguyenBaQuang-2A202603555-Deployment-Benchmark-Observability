@@ -1,5 +1,8 @@
 # Day 14 — Deployment, Benchmark & Observability
 
+> **Bài làm:** [Mission Answers](MISSION_ANSWERS.md) · [Benchmark Report](BENCHMARK_REPORT.md) · [Hướng dẫn deploy tiếp](DEPLOYMENT.md).
+> Code Part 6 ở `06-lab-complete/`; hướng dẫn chạy bản hoàn thiện ở đầu README của thư mục đó. Chưa có deployment cloud; không dùng URL local làm URL public.
+
 > Đưa agent lên cloud, đo xem nó nhanh và đúng tới đâu, rồi giám sát nó khi chạy thật.
 
 > **AICB-P1 · VinUniversity 2026**  

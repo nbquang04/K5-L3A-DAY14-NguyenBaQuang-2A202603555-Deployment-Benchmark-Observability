@@ -1,0 +1,26 @@
+INFO:     Started server process [152681]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8101 (Press CTRL+C to quit)
+INFO:     127.0.0.1:38330 - "GET /openapi.json HTTP/1.1" 200 OK
+[DEBUG] Got question: Hello
+[DEBUG] Using key: sk-hardcoded-fake-key-never-do-this
+[DEBUG] Response: Tôi là AI agent được deploy lên cloud. Câu hỏi của bạn đã được nhận.
+INFO:     127.0.0.1:38332 - "POST /ask?question=Hello HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [152681]
+INFO:     Started server process [154756]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8101 (Press CTRL+C to quit)
+INFO:     127.0.0.1:44454 - "GET /openapi.json HTTP/1.1" 200 OK
+[DEBUG] Got question: Hello
+[DEBUG] Using key: sk-hardcoded-fake-key-never-do-this
+[DEBUG] Response: Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé.
+INFO:     127.0.0.1:44462 - "POST /ask?question=Hello HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [154756]

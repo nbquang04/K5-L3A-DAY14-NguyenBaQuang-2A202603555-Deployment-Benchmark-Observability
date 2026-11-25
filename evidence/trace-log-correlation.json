@@ -1,0 +1,61 @@
+{
+  "slow": [
+    {
+      "ts": "2026-11-25T08:49:58.822513+00:00",
+      "level": "INFO",
+      "service": "observable-agent",
+      "instance": "2b5ce935a4c4",
+      "event": "llm_call",
+      "trace_id": "1756382ce9fe2905f78008adb21a0899",
+      "span_id": "d4b9469bd6c2d3d7",
+      "request_id": "cebfc3c3206d",
+      "model": "mock-llm-small",
+      "agent_version": "v2",
+      "input_tokens": 81,
+      "output_tokens": 46,
+      "cost_usd": 4e-05,
+      "llm_ms": 1695.0
+    },
+    {
+      "ts": "2026-11-25T08:49:58.823684+00:00",
+      "level": "INFO",
+      "service": "observable-agent",
+      "instance": "2b5ce935a4c4",
+      "event": "http_request",
+      "trace_id": "1756382ce9fe2905f78008adb21a0899",
+      "span_id": "d4b9469bd6c2d3d7",
+      "request_id": "cebfc3c3206d",
+      "method": "POST",
+      "route": "/ask",
+      "status": 200,
+      "ms": 1744.1
+    }
+  ],
+  "error": [
+    {
+      "ts": "2026-11-25T08:50:41.078303+00:00",
+      "level": "INFO",
+      "service": "observable-agent",
+      "instance": "611d96a27032",
+      "event": "llm_error",
+      "trace_id": "63adfc2d1e00bceb8a11a2cc4fa6de58",
+      "span_id": "8392fbf74c6b0786",
+      "request_id": "864b26a421fd",
+      "error": "Upstream LLM error: 503 Service Unavailable (mock)"
+    },
+    {
+      "ts": "2026-11-25T08:50:41.078669+00:00",
+      "level": "INFO",
+      "service": "observable-agent",
+      "instance": "611d96a27032",
+      "event": "http_request",
+      "trace_id": "63adfc2d1e00bceb8a11a2cc4fa6de58",
+      "span_id": "8392fbf74c6b0786",
+      "request_id": "864b26a421fd",
+      "method": "POST",
+      "route": "/ask",
+      "status": 503,
+      "ms": 862.1
+    }
+  ]
+}

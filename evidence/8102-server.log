@@ -1,0 +1,14 @@
+WARNING:root:OPENAI_API_KEY not set — using mock LLM
+INFO:     Started server process [152687]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8102 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58346 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58354 - "GET /health HTTP/1.1" 200 OK
+WARNING:root:OPENAI_API_KEY not set — using mock LLM
+INFO:     Started server process [154762]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8102 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58950 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58954 - "GET /health HTTP/1.1" 200 OK

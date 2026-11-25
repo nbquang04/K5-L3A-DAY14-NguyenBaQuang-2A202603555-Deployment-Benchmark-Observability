@@ -1,0 +1,17 @@
+
+════════════════════════════════════════════════════════
+  LOAD TEST REPORT — http://127.0.0.1:8002
+════════════════════════════════════════════════════════
+  Requests     : 300  (concurrency=20)
+  Duration     : 2.94 s
+  Throughput   : 102.02 req/s
+  Error rate   : 0.33%   {'503': 1, '200': 299}
+  Total cost   : $0.010121
+  Latency (ms) : min=152.2  avg=190.0  max=233.8
+                 p50=190.4  p90=214.3  p95=219.2  p99=226.1
+────────────────────────────────────────────────────────
+  SLO p95 ≤ 500ms        : ✅ PASS
+  SLO error rate ≤ 2.0%  : ✅ PASS
+════════════════════════════════════════════════════════
+
+💾 Đã lưu report: /mnt/d/Workspace/VinAI/K5-L3A-DAY14-NguyenBaQuang-2A202603555-Deployment-Benchmark-Observability/reports/load_v2_slow_0.json

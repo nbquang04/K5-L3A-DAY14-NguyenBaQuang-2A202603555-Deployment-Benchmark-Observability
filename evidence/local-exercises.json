@@ -1,0 +1,102 @@
+{
+  "part1_develop": {
+    "status": 200,
+    "headers": {
+      "date": "Wed, 25 Nov 2026 08:01:40 GMT",
+      "server": "uvicorn",
+      "content-length": "95",
+      "content-type": "application/json"
+    },
+    "body": {
+      "answer": "Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé."
+    }
+  },
+  "part1_production": {
+    "status": 200,
+    "headers": {
+      "date": "Wed, 25 Nov 2026 08:01:42 GMT",
+      "server": "uvicorn",
+      "content-length": "129",
+      "content-type": "application/json"
+    },
+    "body": {
+      "status": "ok",
+      "uptime_seconds": 0.2,
+      "version": "1.0.0",
+      "environment": "development",
+      "timestamp": "2026-11-25T08:01:42.187024+00:00"
+    }
+  },
+  "jwt_rate_limit_codes": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    429,
+    429,
+    429,
+    429,
+    429,
+    429,
+    429,
+    429,
+    429,
+    429
+  ],
+  "part5_health": {
+    "status": 200,
+    "headers": {
+      "date": "Wed, 25 Nov 2026 08:02:01 GMT",
+      "server": "uvicorn",
+      "content-length": "185",
+      "content-type": "application/json"
+    },
+    "body": {
+      "status": "ok",
+      "uptime_seconds": 0.4,
+      "version": "1.0.0",
+      "environment": "development",
+      "timestamp": "2026-11-25T08:02:02.072107+00:00",
+      "checks": {
+        "memory": {
+          "status": "ok",
+          "used_percent": 43.5
+        }
+      }
+    }
+  },
+  "part5_ready": {
+    "status": 200,
+    "headers": {
+      "date": "Wed, 25 Nov 2026 08:02:01 GMT",
+      "server": "uvicorn",
+      "content-length": "37",
+      "content-type": "application/json"
+    },
+    "body": {
+      "ready": true,
+      "in_flight_requests": 1
+    }
+  },
+  "part5_sigterm": {
+    "result": {
+      "status": 200,
+      "headers": {
+        "date": "Wed, 25 Nov 2026 08:02:01 GMT",
+        "server": "uvicorn",
+        "content-length": "103",
+        "content-type": "application/json"
+      },
+      "body": {
+        "answer": "Tôi là AI agent được deploy lên cloud. Câu hỏi của bạn đã được nhận."
+      }
+    },
+    "exit_code": 0
+  }
+}

@@ -1,0 +1,31 @@
+agent-2  | ✅ Connected to Redis
+agent-2  | INFO:     Started server process [1]
+agent-2  | INFO:     Waiting for application startup.
+agent-2  | INFO:app:Starting instance instance-917f7d
+agent-2  | INFO:app:Storage: Redis ✅
+agent-2  | INFO:     Application startup complete.
+agent-2  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+agent-2  | INFO:     127.0.0.1:38676 - "GET /health HTTP/1.1" 200 OK
+agent-2  | INFO:     172.31.0.6:57800 - "POST /chat HTTP/1.1" 200 OK
+agent-2  | INFO:     172.31.0.6:57800 - "POST /chat HTTP/1.1" 200 OK
+agent-1  | ✅ Connected to Redis
+agent-1  | INFO:     Started server process [1]
+agent-1  | INFO:     Waiting for application startup.
+agent-1  | INFO:app:Starting instance instance-1e0ad4
+agent-1  | INFO:app:Storage: Redis ✅
+agent-1  | INFO:     Application startup complete.
+agent-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+agent-1  | INFO:     127.0.0.1:38664 - "GET /health HTTP/1.1" 200 OK
+agent-1  | INFO:     172.31.0.6:52698 - "GET /health HTTP/1.1" 200 OK
+agent-1  | INFO:     172.31.0.6:52698 - "POST /chat HTTP/1.1" 200 OK
+agent-1  | INFO:     172.31.0.6:52698 - "POST /chat HTTP/1.1" 200 OK
+agent-1  | INFO:     172.31.0.6:52698 - "GET /chat/a07d2e35-7d6f-4cda-92ce-51760cf8f32e/history HTTP/1.1" 200 OK
+agent-3  | ✅ Connected to Redis
+agent-3  | INFO:     Started server process [1]
+agent-3  | INFO:     Waiting for application startup.
+agent-3  | INFO:app:Starting instance instance-4f53aa
+agent-3  | INFO:app:Storage: Redis ✅
+agent-3  | INFO:     Application startup complete.
+agent-3  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+agent-3  | INFO:     127.0.0.1:38634 - "GET /health HTTP/1.1" 200 OK
+agent-3  | INFO:     172.31.0.6:44846 - "POST /chat HTTP/1.1" 200 OK

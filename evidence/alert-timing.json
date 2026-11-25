@@ -1,0 +1,11 @@
+{
+  "configuration_started_utc": "2026-11-25T08:48:02.241911+00:00",
+  "faults": {
+    "MOCK_ERROR_RATE": 0.2,
+    "MOCK_SLOW_RATE": 0.3
+  },
+  "first_firing_seconds": {
+    "AgentHighErrorRate": 111.06,
+    "AgentHighLatencyP95": 167.88
+  }
+}

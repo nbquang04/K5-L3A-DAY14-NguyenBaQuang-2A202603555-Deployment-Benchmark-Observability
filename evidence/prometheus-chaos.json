@@ -1,0 +1,99 @@
+{
+  "p95": {
+    "status": "success",
+    "data": {
+      "resultType": "vector",
+      "result": [
+        {
+          "metric": {},
+          "value": [
+            1795596642.331,
+            "1.900755741161741"
+          ]
+        }
+      ]
+    }
+  },
+  "avg": {
+    "status": "success",
+    "data": {
+      "resultType": "vector",
+      "result": [
+        {
+          "metric": {},
+          "value": [
+            1795596642.351,
+            "0.5918932434771137"
+          ]
+        }
+      ]
+    }
+  },
+  "rps_by_instance": {
+    "status": "success",
+    "data": {
+      "resultType": "vector",
+      "result": [
+        {
+          "metric": {
+            "instance": "172.30.0.6:8000"
+          },
+          "value": [
+            1795596642.381,
+            "7.874564459930315"
+          ]
+        },
+        {
+          "metric": {
+            "instance": "172.30.0.8:8000"
+          },
+          "value": [
+            1795596642.381,
+            "8.148854961832061"
+          ]
+        }
+      ]
+    }
+  },
+  "tokens": {
+    "status": "success",
+    "data": {
+      "resultType": "vector",
+      "result": [
+        {
+          "metric": {
+            "type": "input"
+          },
+          "value": [
+            1795596642.411,
+            "1010.9163630076869"
+          ]
+        },
+        {
+          "metric": {
+            "type": "output"
+          },
+          "value": [
+            1795596642.411,
+            "528.7844109902386"
+          ]
+        }
+      ]
+    }
+  },
+  "error_rate": {
+    "status": "success",
+    "data": {
+      "resultType": "vector",
+      "result": [
+        {
+          "metric": {},
+          "value": [
+            1795596642.438,
+            "0.18717864657036265"
+          ]
+        }
+      ]
+    }
+  }
+}

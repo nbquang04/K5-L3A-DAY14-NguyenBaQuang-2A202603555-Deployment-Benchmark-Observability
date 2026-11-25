@@ -1,0 +1,7 @@
+load_v2_c1.log exit 0
+load_v2_c10.log exit 0
+load_v2_c50.log exit 0
+load_v2_c100.log exit 1
+load_v2_slow_0.log exit 0
+load_v2_slow_0.03.log exit 0
+load_v2_slow_0.1.log exit 1

@@ -1,0 +1,6 @@
+{
+  "grafana": "http://localhost:3001",
+  "prometheus": "http://localhost:9090/alerts",
+  "slow": "http://localhost:16686/trace/1756382ce9fe2905f78008adb21a0899",
+  "error": "http://localhost:16686/trace/63adfc2d1e00bceb8a11a2cc4fa6de58"
+}

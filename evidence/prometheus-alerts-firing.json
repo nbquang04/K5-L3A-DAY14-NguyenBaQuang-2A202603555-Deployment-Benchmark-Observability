@@ -1,0 +1,46 @@
+{
+  "status": "success",
+  "data": {
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "AgentHighErrorRate",
+          "severity": "critical"
+        },
+        "annotations": {
+          "description": "Error rate hiện tại: 19.73% (SLO: < 5%)",
+          "summary": "Error rate /ask vượt 5%"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T08:48:47.401817116Z",
+        "value": "1.973166960552103e-01"
+      },
+      {
+        "labels": {
+          "alertname": "AgentHighLatencyP95",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "p95 hiện tại: 1.899s (SLO: < 1s)",
+          "summary": "p95 latency /ask vượt 1 giây"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T08:48:37.401817116Z",
+        "value": "1.8987877276128708e+00"
+      },
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "Tốc độ chi tiêu hiện tại: $3.99/giờ",
+          "summary": "Chi phí LLM đang vượt $2/giờ"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T08:45:12.571501534Z",
+        "value": "3.9944978140451024e+00"
+      }
+    ]
+  }
+}

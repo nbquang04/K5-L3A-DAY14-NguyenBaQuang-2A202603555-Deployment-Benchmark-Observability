@@ -1,0 +1,21 @@
+{
+  "invalid_input_statuses": [
+    422,
+    422,
+    422,
+    422
+  ],
+  "rate_codes": {
+    "200": 10,
+    "429": 30
+  },
+  "budget_totals": {
+    "budget:day:2026-11-25": 6.57e-05,
+    "budget:month:2026-11": 6.57e-05
+  },
+  "accepted_cost_usd": 6.57e-05,
+  "budget_codes": {
+    "200": 6,
+    "402": 34
+  }
+}

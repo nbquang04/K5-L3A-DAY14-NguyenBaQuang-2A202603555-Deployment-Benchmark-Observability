@@ -1,0 +1,12 @@
+{
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "os_name": "posix",
+  "logical_cpus_wsl": 12,
+  "wsl_memory_total_bytes": 8014450688,
+  "docker_server_version": "28.3.2",
+  "docker_cpus": 12,
+  "docker_memory_total_bytes": 8014450688,
+  "agent_cpu_limit_each": 0.5,
+  "agent_memory_limit_each_bytes": 268435456
+}

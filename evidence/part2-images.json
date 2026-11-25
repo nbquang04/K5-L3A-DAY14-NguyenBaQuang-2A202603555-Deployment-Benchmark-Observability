@@ -1,0 +1,158 @@
+[
+    {
+        "Id": "sha256:1596e197cba389e0aa4109a131dfdcf9786587615d05c63bdfa43f22d51658e0",
+        "RepoTags": [
+            "my-agent:develop"
+        ],
+        "RepoDigests": [
+            "my-agent@sha256:1596e197cba389e0aa4109a131dfdcf9786587615d05c63bdfa43f22d51658e0"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-25T08:05:43.684296475Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 426319963,
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:5a13ab4fd379b4a5b3e5e0b199e5ebc916896237a7b3775975b960743d34373d",
+                "sha256:659e96a3451280f2aaa6413e0719cbc261683886e44409b9c023244aa7785432",
+                "sha256:0cb57ba75d8944a94e4da61cfa72bef30f7f39526d228e0993ca575f9a4ac012",
+                "sha256:eb48e6d293c47c956dcefef857bd52fda8631857a9dc63073377662b485fbe2a",
+                "sha256:b353bd09746fed1172f58ac28102bff6243bd72b65fd5320cbb25ce86bfd5c56",
+                "sha256:efbeb2f184d57bf2e8e6a64d68eab3e85acd5d795aec25218456d31d8fae6f6b",
+                "sha256:b1083ed84ef09a97c394bbafc6644b9ee00efb4273395dc81d6ff5e23cd721dc",
+                "sha256:685ca9f3267f8e03f846b216c7e46aaabf2d71ad3c3acf7a40a2bd0fc81aa7f6",
+                "sha256:f915c8a1b89c20314e3f265399e30b082410bd4c2adf0d44c5d4c1d2c7d2a301",
+                "sha256:b75c504b12d14f075e52e37b7415555e8a1d6d492cf9ccb9fdfa4006aaaaada1",
+                "sha256:9b729ea438ead33f2ea3421030d1c22c6abb657418fb3e60d5ce4c2e997d11b9",
+                "sha256:75ace68e7dd48264212155e9c1308496f92a555e60c7371a905c71052af551c4",
+                "sha256:9a86924566fd6bc8185d352f9568967d79f514e8507eb82974d7911dc72a5d59"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-25T08:08:12.236743324Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:1596e197cba389e0aa4109a131dfdcf9786587615d05c63bdfa43f22d51658e0",
+            "size": 856
+        },
+        "Config": {
+            "ArgsEscaped": true,
+            "Cmd": [
+                "python",
+                "app.py"
+            ],
+            "Entrypoint": null,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.18",
+                "PYTHON_SHA256=9120e0a653868f6e3698d36cdd99e5a58903ec9469e448f21d98f7b16d8fa290"
+            ],
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Labels": null,
+            "OnBuild": null,
+            "User": "",
+            "Volumes": null,
+            "WorkingDir": "/app"
+        }
+    },
+    {
+        "Id": "sha256:b504fb9588c502aa5df6dbf6e28436004579b4ac1699412bff448cd152280d7e",
+        "RepoTags": [
+            "my-agent:advanced"
+        ],
+        "RepoDigests": [
+            "my-agent@sha256:b504fb9588c502aa5df6dbf6e28436004579b4ac1699412bff448cd152280d7e"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-25T08:06:57.906877672Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 57409270,
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:54ae9782e24f4abba5eebc5cc388f983b590abb011b69f20e0e592240bb7a698",
+                "sha256:87580868fddd35ea220200fd8291dc6fad807c2e7d6c40fa57a40b8baf227210",
+                "sha256:091c101662453e73d920ee66262c81c9d836f405b278a5d8d310490f89bd9244",
+                "sha256:7d3798b9daa6a3964ae34738ee9b899d0c086fcb4f6538efd2a874187ae33423",
+                "sha256:d20e5d92d09330001be8e2a0fac6fbf35196eae6495ed228ab02f8ac0ed70335",
+                "sha256:608fc196dc55077992a83d200e18dc68f92f77964ac6a826d91cbfe2679390dc",
+                "sha256:6f2a6e11aeca897376d146e49852e871e66c2632cd71c90fe633675491dccae4",
+                "sha256:56b8d791e091bfce528794c3d784396917d76c6215375ec98b14f918fc7ab297",
+                "sha256:1c8a83c8116c69dbbe30ccad7ea9dd8cc47d3d3e4b171e83b8d7f282034ed9ea",
+                "sha256:381cb55ea513d867a16d6059adf66bcae299a89cd3c1701724e2b69de642cf28",
+                "sha256:af7880b8ed824eb579a6822c1aab18993efda3aedc5a717ed74229383f4fa20e"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-25T08:08:15.663462392Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:b504fb9588c502aa5df6dbf6e28436004579b4ac1699412bff448cd152280d7e",
+            "size": 856
+        },
+        "Config": {
+            "ArgsEscaped": true,
+            "Cmd": [
+                "uvicorn",
+                "main:app",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8000",
+                "--workers",
+                "2"
+            ],
+            "Entrypoint": null,
+            "Env": [
+                "PATH=/home/appuser/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.18",
+                "PYTHON_SHA256=9120e0a653868f6e3698d36cdd99e5a58903ec9469e448f21d98f7b16d8fa290",
+                "PYTHONUSERBASE=/home/appuser/.local",
+                "PYTHONPATH=/app"
+            ],
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Healthcheck": {
+                "Interval": 30000000000,
+                "Retries": 3,
+                "StartPeriod": 5000000000,
+                "Test": [
+                    "CMD-SHELL",
+                    "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health')\" || exit 1"
+                ],
+                "Timeout": 10000000000
+            },
+            "Labels": null,
+            "OnBuild": null,
+            "User": "appuser",
+            "Volumes": null,
+            "WorkingDir": "/app"
+        }
+    }
+]

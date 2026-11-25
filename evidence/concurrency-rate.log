@@ -1,0 +1,126 @@
+INFO:     Uvicorn running on http://127.0.0.1:53341 (Press CTRL+C to quit)
+INFO:     Started parent process [158308]
+INFO:     Started server process [158311]
+INFO:     Waiting for application startup.
+INFO:     Started server process [158310]
+INFO:     Waiting for application startup.
+{"ts": "2026-11-25T08:21:38.477689+00:00", "level": "INFO", "event": "startup", "environment": "development"}
+{"ts": "2026-11-25T08:21:38.477371+00:00", "level": "INFO", "event": "startup", "environment": "development"}
+INFO:     Application startup complete.
+INFO:     Application startup complete.
+{"ts": "2026-11-25T08:21:38.558024+00:00", "level": "INFO", "event": "http_request", "request_id": "276d3a04e7774c058baf14e1bc7de6f5", "method": "GET", "route": "/ready", "status": 200, "ms": 19.51}
+INFO:     127.0.0.1:33732 - "GET /ready HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:38.567488+00:00", "level": "INFO", "event": "http_request", "request_id": "ff3d425072b0444dab9c168f1f402ead", "method": "POST", "route": "/ask", "status": 422, "ms": 6.44}
+INFO:     127.0.0.1:33732 - "POST /ask HTTP/1.1" 422 Unprocessable Entity
+{"ts": "2026-11-25T08:21:38.571263+00:00", "level": "INFO", "event": "http_request", "request_id": "13870e9f97af4c80816e17ae37b4f2d8", "method": "POST", "route": "/ask", "status": 422, "ms": 1.38}
+INFO:     127.0.0.1:33732 - "POST /ask HTTP/1.1" 422 Unprocessable Entity
+{"ts": "2026-11-25T08:21:38.575649+00:00", "level": "INFO", "event": "http_request", "request_id": "ea057c033b8b44fca921f30e2c11e6cf", "method": "POST", "route": "/ask", "status": 422, "ms": 2.31}
+INFO:     127.0.0.1:33732 - "POST /ask HTTP/1.1" 422 Unprocessable Entity
+{"ts": "2026-11-25T08:21:38.579260+00:00", "level": "INFO", "event": "http_request", "request_id": "518fb52823944ee886fe3d23ab5737c0", "method": "POST", "route": "/ask", "status": 422, "ms": 1.54}
+INFO:     127.0.0.1:33732 - "POST /ask HTTP/1.1" 422 Unprocessable Entity
+{"ts": "2026-11-25T08:21:38.682225+00:00", "level": "INFO", "event": "http_request", "request_id": "164b9146970e43e581962b0dcee96488", "method": "POST", "route": "/ask", "status": 429, "ms": 69.69}
+INFO:     127.0.0.1:33834 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.683645+00:00", "level": "INFO", "event": "http_request", "request_id": "58dc4907d8f549ce921842f44cf41c08", "method": "POST", "route": "/ask", "status": 429, "ms": 72.82}
+INFO:     127.0.0.1:33810 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.688472+00:00", "level": "INFO", "event": "http_request", "request_id": "d004fb8b68e6436496adf3fbeba96888", "method": "POST", "route": "/ask", "status": 429, "ms": 72.24}
+INFO:     127.0.0.1:33864 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.690040+00:00", "level": "INFO", "event": "http_request", "request_id": "182868f257df4fb2b06075666e16850a", "method": "POST", "route": "/ask", "status": 429, "ms": 70.38}
+INFO:     127.0.0.1:33872 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.691608+00:00", "level": "INFO", "event": "http_request", "request_id": "346db28e0baa4e9d87a16218aa965b74", "method": "POST", "route": "/ask", "status": 429, "ms": 68.36}
+INFO:     127.0.0.1:33888 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.692596+00:00", "level": "INFO", "event": "http_request", "request_id": "3bd0bd6c094f43bc82893a596331fb3b", "method": "POST", "route": "/ask", "status": 429, "ms": 79.92}
+INFO:     127.0.0.1:33858 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.693600+00:00", "level": "INFO", "event": "http_request", "request_id": "eee1b1b49eca4362bb25c5b0753c6d21", "method": "POST", "route": "/ask", "status": 429, "ms": 66.03}
+INFO:     127.0.0.1:33890 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.695117+00:00", "level": "INFO", "event": "http_request", "request_id": "58b9ec9ed9534cc6b35bb2d44ec06969", "method": "POST", "route": "/ask", "status": 429, "ms": 63.92}
+INFO:     127.0.0.1:33898 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.700142+00:00", "level": "INFO", "event": "http_request", "request_id": "de69336a67404dc98578e049103d5bf7", "method": "POST", "route": "/ask", "status": 429, "ms": 61.33}
+INFO:     127.0.0.1:33904 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.701473+00:00", "level": "INFO", "event": "http_request", "request_id": "afd9726642b04f239337d11b3f9dfd92", "method": "POST", "route": "/ask", "status": 429, "ms": 58.88}
+INFO:     127.0.0.1:33906 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.702312+00:00", "level": "INFO", "event": "http_request", "request_id": "232d24a6f1d94fa1b0a8c718d8e15104", "method": "POST", "route": "/ask", "status": 429, "ms": 56.28}
+INFO:     127.0.0.1:33920 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.706436+00:00", "level": "INFO", "event": "http_request", "request_id": "00938c2b4e4c4c308846ec4070849490", "method": "POST", "route": "/ask", "status": 429, "ms": 54.62}
+INFO:     127.0.0.1:33956 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.707698+00:00", "level": "INFO", "event": "http_request", "request_id": "0918f4199d8f4203af4d5b7e2c450305", "method": "POST", "route": "/ask", "status": 429, "ms": 42.25}
+INFO:     127.0.0.1:33978 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.708462+00:00", "level": "INFO", "event": "http_request", "request_id": "2cbf56c9402b4d108f6ea10a823dd785", "method": "POST", "route": "/ask", "status": 429, "ms": 37.91}
+INFO:     127.0.0.1:33994 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.710734+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:38.711501+00:00", "level": "INFO", "event": "http_request", "request_id": "7cb282f260dc4563bc151655064fc815", "method": "POST", "route": "/ask", "status": 429, "ms": 35.35}
+INFO:     127.0.0.1:34034 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.712533+00:00", "level": "INFO", "event": "http_request", "request_id": "b0fce7078bcb4751a63543a37ef44383", "method": "POST", "route": "/ask", "status": 429, "ms": 69.01}
+{"ts": "2026-11-25T08:21:38.712972+00:00", "level": "INFO", "event": "http_request", "request_id": "2c5856d4fae149bf81a28ac01dec921f", "method": "POST", "route": "/ask", "status": 429, "ms": 35.41}
+INFO:     127.0.0.1:34078 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.713754+00:00", "level": "INFO", "event": "http_request", "request_id": "f1ff15b4a2b54bb29eadf49000b4053f", "method": "POST", "route": "/ask", "status": 200, "ms": 132.24}
+INFO:     127.0.0.1:33732 - "POST /ask HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33928 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.716706+00:00", "level": "INFO", "event": "http_request", "request_id": "aaf7e9a0c6e049da9b839477788bc1fb", "method": "POST", "route": "/ask", "status": 429, "ms": 74.76}
+INFO:     127.0.0.1:33740 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.719340+00:00", "level": "INFO", "event": "http_request", "request_id": "c45a441feda4471d94561e5be9d1bd5d", "method": "POST", "route": "/ask", "status": 429, "ms": 70.45}
+INFO:     127.0.0.1:33970 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.720313+00:00", "level": "INFO", "event": "http_request", "request_id": "a1cfb3ae4d9647edafccffd596e4d263", "method": "POST", "route": "/ask", "status": 429, "ms": 74.83}
+INFO:     127.0.0.1:33944 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.720923+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:38.721087+00:00", "level": "INFO", "event": "http_request", "request_id": "295daeb4e34e4379820f02c76bdcfb1e", "method": "POST", "route": "/ask", "status": 429, "ms": 59.22}
+INFO:     127.0.0.1:34004 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.721708+00:00", "level": "INFO", "event": "http_request", "request_id": "c108377864564aeabd5185f3ebaa4b77", "method": "POST", "route": "/ask", "status": 200, "ms": 123.57}
+INFO:     127.0.0.1:33808 - "POST /ask HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:38.724507+00:00", "level": "INFO", "event": "http_request", "request_id": "f21775668f1c47b9b2afe4896642b0d1", "method": "POST", "route": "/ask", "status": 429, "ms": 58.13}
+INFO:     127.0.0.1:34018 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.725769+00:00", "level": "INFO", "event": "http_request", "request_id": "55567052f0f24f55b7bf5193fda00a52", "method": "POST", "route": "/ask", "status": 429, "ms": 67.29}
+INFO:     127.0.0.1:33980 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.726566+00:00", "level": "INFO", "event": "http_request", "request_id": "895c888933734b03a558fefa834fad32", "method": "POST", "route": "/ask", "status": 429, "ms": 72.99}
+INFO:     127.0.0.1:33972 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.727357+00:00", "level": "INFO", "event": "http_request", "request_id": "cccbe494d4594862a00965f15c0fbc31", "method": "POST", "route": "/ask", "status": 429, "ms": 64.26}
+INFO:     127.0.0.1:34014 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.728158+00:00", "level": "INFO", "event": "http_request", "request_id": "721d75101c954a69aded588e13c62b60", "method": "POST", "route": "/ask", "status": 429, "ms": 58.88}
+INFO:     127.0.0.1:34026 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.728989+00:00", "level": "INFO", "event": "http_request", "request_id": "fec6a630bc55439c9a6e46e1e0d42c7c", "method": "POST", "route": "/ask", "status": 429, "ms": 56.99}
+INFO:     127.0.0.1:34048 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.729760+00:00", "level": "INFO", "event": "http_request", "request_id": "20b2673d15d646a38ed1baa4b3807fd1", "method": "POST", "route": "/ask", "status": 429, "ms": 55.13}
+INFO:     127.0.0.1:34064 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.731832+00:00", "level": "INFO", "event": "http_request", "request_id": "99fb05fa95b04c3880533fbd1ebc5b9e", "method": "POST", "route": "/ask", "status": 429, "ms": 53.45}
+INFO:     127.0.0.1:34092 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.733053+00:00", "level": "INFO", "event": "http_request", "request_id": "164c46bfabc54df59340b232f63fc3c3", "method": "POST", "route": "/ask", "status": 429, "ms": 56.1}
+INFO:     127.0.0.1:34086 - "POST /ask HTTP/1.1" 429 Too Many Requests
+{"ts": "2026-11-25T08:21:38.733687+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:38.734481+00:00", "level": "INFO", "event": "http_request", "request_id": "f85b57a7fcd6423d9448ef9b95c25945", "method": "POST", "route": "/ask", "status": 200, "ms": 144.99}
+INFO:     127.0.0.1:33756 - "POST /ask HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:38.734943+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:38.736057+00:00", "level": "INFO", "event": "http_request", "request_id": "f4a9a197e936449d838aac7412d650d6", "method": "POST", "route": "/ask", "status": 200, "ms": 149.22}
+INFO:     127.0.0.1:33746 - "POST /ask HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:38.750764+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:38.751429+00:00", "level": "INFO", "event": "http_request", "request_id": "5a949ca4d5824338a7cfebaeb01f3e47", "method": "POST", "route": "/ask", "status": 200, "ms": 156.26}
+INFO:     127.0.0.1:33790 - "POST /ask HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:38.752876+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:38.753342+00:00", "level": "INFO", "event": "http_request", "request_id": "47e37368f5bf4a899c40296de547acf6", "method": "POST", "route": "/ask", "status": 200, "ms": 160.07}
+INFO:     127.0.0.1:33760 - "POST /ask HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:38.757770+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:38.758520+00:00", "level": "INFO", "event": "http_request", "request_id": "a85daef22c4d4c9a8b08c3d41215ff43", "method": "POST", "route": "/ask", "status": 200, "ms": 164.05}
+INFO:     127.0.0.1:33774 - "POST /ask HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:38.765169+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:38.766116+00:00", "level": "INFO", "event": "http_request", "request_id": "640b6fbdf31d4abf88ec7ea217eba22e", "method": "POST", "route": "/ask", "status": 200, "ms": 164.24}
+INFO:     127.0.0.1:33794 - "POST /ask HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:38.770509+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:38.771390+00:00", "level": "INFO", "event": "http_request", "request_id": "a0002b3c30094467b023731f7c501e32", "method": "POST", "route": "/ask", "status": 200, "ms": 160.41}
+INFO:     127.0.0.1:33850 - "POST /ask HTTP/1.1" 200 OK
+{"ts": "2026-11-25T08:21:38.802415+00:00", "level": "INFO", "event": "llm_call", "input_tokens": 1, "output_tokens": 18, "cost_usd": 1.095e-05}
+{"ts": "2026-11-25T08:21:38.803233+00:00", "level": "INFO", "event": "http_request", "request_id": "213d5064a9e645deb3952391e7535cd7", "method": "POST", "route": "/ask", "status": 200, "ms": 193.63}
+INFO:     127.0.0.1:33822 - "POST /ask HTTP/1.1" 200 OK
+INFO:     Received SIGTERM, exiting.
+INFO:     Terminated child process [158310]
+INFO:     Terminated child process [158311]
+INFO:     Waiting for child process [158310]
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+{"ts": "2026-11-25T08:21:39.394255+00:00", "level": "INFO", "event": "shutdown_complete"}
+INFO:     Application shutdown complete.
+INFO:     Finished server process [158311]
+INFO:     Waiting for application shutdown.
+{"ts": "2026-11-25T08:21:39.406556+00:00", "level": "INFO", "event": "shutdown_complete"}
+INFO:     Application shutdown complete.
+INFO:     Finished server process [158310]
+INFO:     Waiting for child process [158311]
+INFO:     Stopping parent process [158308]

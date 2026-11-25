@@ -1,0 +1,65 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.36kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 0.7s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 486B 0.1s done
+#3 DONE 0.1s
+
+#4 [builder 1/5] FROM docker.io/library/python:3.11-slim@sha256:61e01f72680f86a5279ad510818ab7b2ee9f049822589d4e34e33e044360356c
+#4 resolve docker.io/library/python:3.11-slim@sha256:61e01f72680f86a5279ad510818ab7b2ee9f049822589d4e34e33e044360356c 0.1s done
+#4 DONE 0.1s
+
+#5 [internal] load build context
+#5 transferring context: 2.39kB 0.1s done
+#5 DONE 0.2s
+
+#6 [builder 3/5] RUN apt-get update && apt-get install -y     gcc     libpq-dev     && rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [runtime 4/8] COPY --from=builder /root/.local /home/appuser/.local
+#7 CACHED
+
+#8 [runtime 5/8] COPY 02-docker/production/main.py .
+#8 CACHED
+
+#9 [runtime 7/8] COPY utils/mock_llm.py /app/utils/mock_llm.py
+#9 CACHED
+
+#10 [builder 2/5] WORKDIR /app
+#10 CACHED
+
+#11 [runtime 6/8] RUN mkdir -p /app/utils
+#11 CACHED
+
+#12 [runtime 3/8] WORKDIR /app
+#12 CACHED
+
+#13 [builder 4/5] COPY 02-docker/production/requirements.txt .
+#13 CACHED
+
+#14 [runtime 2/8] RUN groupadd -r appuser && useradd -r -g appuser appuser
+#14 CACHED
+
+#15 [builder 5/5] RUN pip install --no-cache-dir --user -r requirements.txt
+#15 CACHED
+
+#16 [runtime 8/8] RUN chown -R appuser:appuser /app
+#16 CACHED
+
+#17 exporting to image
+#17 exporting layers done
+#17 exporting manifest sha256:55e96c24ea81affa16113a739796f27509f1aa3d21dc7aad6fb0f4e0e16c8f6c done
+#17 exporting config sha256:b8a07b3583753d297aa8efb50bafe179fae169f4d360ec6afa8633651a454e07 done
+#17 exporting attestation manifest sha256:dbe0f75bdeb154910fe6c69b03c275520dd49da5871d95cf4bddca123eba8068 0.1s done
+#17 exporting manifest list sha256:b504fb9588c502aa5df6dbf6e28436004579b4ac1699412bff448cd152280d7e
+#17 exporting manifest list sha256:b504fb9588c502aa5df6dbf6e28436004579b4ac1699412bff448cd152280d7e 0.1s done
+#17 naming to docker.io/library/my-agent:advanced 0.0s done
+#17 unpacking to docker.io/library/my-agent:advanced
+#17 unpacking to docker.io/library/my-agent:advanced 0.0s done
+#17 DONE 0.6s
